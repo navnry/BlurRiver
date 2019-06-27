@@ -1,7 +1,7 @@
-$(function () {
+$(function() {
     var banner = new Swiper(".banner .swiper-container", {
         speed: 800,
-        effect: "fade",
+        // effect: "fade",
         pagination: {
             el: ".banner .swiper-pagination",
             clickable: true
@@ -32,17 +32,17 @@ $(function () {
             swiper: thumbsSwiper,
         },
         on: {
-            init: function (swiper) {
+            init: function(swiper) {
                 slide = this.slides.eq(0);
                 slide.addClass('ani-slide');
             },
-            transitionStart: function () {
+            transitionStart: function() {
                 for (i = 0; i < this.slides.length; i++) {
                     slide = this.slides.eq(i);
                     slide.removeClass('ani-slide');
                 }
             },
-            transitionEnd: function () {
+            transitionEnd: function() {
                 slide = this.slides.eq(this.activeIndex);
                 slide.addClass('ani-slide');
 

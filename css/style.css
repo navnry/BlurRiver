@@ -345,6 +345,7 @@ a:hover {
     float: left;
     line-height: 83px;
     position: relative;
+    transition: all .2s linear,
 }
 
 .banner .navbar .nav ul>li.search {
@@ -417,6 +418,11 @@ a:hover {
 
 .banner .navbar .nav ul>li:hover {
     background: rgba(0, 74, 152, .1);
+    transition: all .2s linear,
+}
+
+.banner .navbar .nav ul>li.search {
+    background: none
 }
 
 .banner .navbar .nav ul>li:hover ol {
@@ -1328,6 +1334,7 @@ a:hover {
     height: 100%;
     padding: 35px;
     position: relative;
+    transition: .2s all linear;
 }
 
 .news .list ul li .con:hover {
@@ -1349,12 +1356,12 @@ a:hover {
 }
 
 .news .list ul li .pic-box img {
-    transition: all .2s linear;
+    transition: all .3s linear;
 }
 
 .news .list ul li .pic-box:hover img {
-    transform: scale(1.2);
-    transition: all .2s linear;
+    transform: scale(1.1);
+    transition: all .3s linear;
 }
 
 .news .list ul li .pic {

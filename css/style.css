@@ -115,8 +115,8 @@ ul:after,
 html, body {
     min-width: 1200px;
     /*font-family: 'Noto Sans SC', sans-serif;*/
-    font-family: SourceHanSansCN-Regular, sans-serif;
-    font-weight: 200;
+    /* font-family: SourceHanSansCN-Regular, sans-serif; */
+    /* font-weight: 200; */
 }
 
 /*html::-webkit-scrollbar {*/
@@ -216,7 +216,7 @@ a:hover {
 
 .banner .navbar .logo {
     float: left;
-    margin-top: 24px;
+    margin-top: 12px;
 }
 
 .banner .navbar .logo h1 {
@@ -226,7 +226,9 @@ a:hover {
 .banner .navbar .logo a {
     display: block;
 }
-
+.banner .navbar .logo img{
+    width: 200px;
+}
 .banner .navbar .nav {
     float: right;
     height: 100%;
@@ -252,7 +254,7 @@ a:hover {
 .banner .navbar .nav ul > li > a {
     display: block;
     padding: 0 15px;
-    font-size: 14px;
+    font-size: 16px;
     color: #004a98;
     position: relative;
 }
@@ -325,7 +327,7 @@ a:hover {
 
 .banner .navbar .nav ol li a {
     color: #ffffff;
-    font-size: 12px;
+    font-size: 14px;
     display: block;
 }
 
@@ -409,7 +411,7 @@ a:hover {
 }
 
 .footer .copyright span {
-    font-size: 12px;
+    font-size: 14px;
     color: #ffffff;
     line-height: 33px;
 
@@ -424,12 +426,19 @@ a:hover {
     box-shadow: 0 1px 16px 0 rgba(34, 23, 20, 0.06);
     border-radius: 50%;
     position: fixed;
-    left: 50%;
+    left: 58%;
     margin-left: 530px;
     bottom: 200px;
     z-index: 999;
     text-align: center;
     cursor: pointer;
+    transition: all .2s linear;
+}
+
+#totop:hover{
+    transform: scale(1.1);
+    box-shadow: 0 1px 16px 0 rgba(34, 23, 20, 0.14);
+    transition: all .2s linear;
 }
 
 #totop img {
@@ -504,7 +513,17 @@ a:hover {
     margin-top: 33px;
     margin-left: 146px;
 }
-
+.source .list ul li:nth-child(2) h3,
+.source .list ul li:nth-child(2) span{
+    left: 80px;
+}
+.source .list ul li:nth-child(3) h3,
+.source .list ul li:nth-child(3) span{
+    left: 60px;
+}
+.source .list ul li:nth-child(3) img{
+        margin-left: 180px;
+}
 .source .list .list-box:after {
     content: '';
     display: block;
@@ -527,16 +546,16 @@ a:hover {
 .source .list ul li h3 {
     position: absolute;
     top: 30px;
-    left: 70px;
+    left: 50px;
     color: #004a98;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .source .list ul li span {
     position: absolute;
-    top: 50px;
-    left: 70px;
-    font-size: 14px;
+    top: 60px;
+    left: 50px;
+    font-size: 16px;
     color: #696969;
 }
 
@@ -732,7 +751,7 @@ a:hover {
 }
 
 #gallery .swiper-slide h5 {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     transform: translateX(-200px);
     opacity: 0;
@@ -745,7 +764,7 @@ a:hover {
 }
 
 #gallery .swiper-slide span {
-    font-size: 20px;
+    font-size: 30px;
     line-height: 34px;
     display: block;
     padding: 15px 0;
@@ -760,7 +779,7 @@ a:hover {
 }
 
 #gallery .swiper-slide p {
-    font-size: 12px;
+    font-size: 18px;
     line-height: 34px;
     transform: translateX(-100px);
     opacity: 0;
@@ -1037,7 +1056,7 @@ a:hover {
 
 @keyframes circle-opacity {
     from {
-        opacity: 1;
+        opacity: .3;
         transform: scale(.8);
     }
     to {
@@ -1048,7 +1067,7 @@ a:hover {
 
 @keyframes circle-opacity-2 {
     from {
-        opacity: 1;
+        opacity: .3;
         transform: scale(.1);
     }
     to {
@@ -1097,12 +1116,31 @@ a:hover {
     position: relative;
 }
 
+
+.news .list ul li .con:hover{
+    background: #00b1ef;
+    transition: .2s all linear;
+}
+
+.news .list ul li .con:hover a p,
+.news .list ul li .con:hover a span,
+.news .list ul li .con:hover a h6{
+    color: #ffffff
+}
 .news .list ul li .pic-box {
     width: 100%;
     height: 50%;
     position: absolute;
+    overflow: hidden
 }
 
+.news .list ul li .pic-box img{
+    transition: all .2s linear;
+}
+.news .list ul li .pic-box:hover img{
+    transform: scale(1.2);
+    transition: all .2s linear;
+}
 .news .list ul li .pic {
     width: 100%;
     height: 100%;
@@ -1142,6 +1180,12 @@ a:hover {
     z-index: 2;
 }
 
+
+.news .list ul li:nth-child(odd) .con:hover:after{
+    border-top: 15px solid #00b1ef;
+    transition: all .2s linear;
+}
+
 .news .list ul li:nth-child(even) .con-box .con:after {
     content: '';
     display: block;
@@ -1154,6 +1198,10 @@ a:hover {
     top: -30px;
     left: 35px;
     z-index: 2;
+}
+.news .list ul li:nth-child(even) .con:hover:after{
+    border-bottom: 15px solid #00b1ef;
+    transition: all .2s linear;
 }
 
 .news .list ul li .pic img {
@@ -1226,9 +1274,9 @@ a:hover {
 
 .introduction span,
 .introduction p {
-    font-size: 14px;
+    font-size: 16px;
     color: #696969;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     text-indent: 28px;
     line-height: 32px;
 }
@@ -1307,7 +1355,7 @@ a:hover {
 
 .timeline-item {
     width: 566px;
-    height: 183px;
+    /* height: 183px; */
     background-color: #dcf0ff;
     border-radius: 5px;
     padding: 24px 18px;
@@ -1383,7 +1431,7 @@ a:hover {
 }
 
 .timeline-item .con p {
-    font-size: 12px;
+    font-size: 14px;
     color: #696969;
     /*letter-spacing: 1px;*/
     line-height: 28px;
@@ -1414,7 +1462,7 @@ a:hover {
 }
 
 .contact .left span {
-    font-size: 14px;
+    font-size: 16px;
     color: #696969;
     padding-left: 17px;
 }
@@ -1490,7 +1538,7 @@ a:hover {
 .sliderbar ul li a {
     display: block;
     line-height: 45px;
-    font-size: 16px;
+    font-size: 18px;
     color: #696969;
     padding: 0 27px;
 }
@@ -2070,14 +2118,14 @@ a:hover {
 }
 
 .rongyu .list .con h6 {
-    font-size: 20px;
+    font-size: 24px;
     color: #004a98;
     font-weight: 600;
     margin-bottom: 30px;
 }
 
 .rongyu .list .con p {
-    font-size: 14px;
+    font-size: 16px;
     color: #696969;
     line-height: 33px;
     letter-spacing: 1px;
@@ -2205,13 +2253,13 @@ a:hover {
 }
 
 .story-tit-bd ul li h5 {
-    font-size: 19px;
+    font-size: 22px;
     color: #ffffff;
     margin-bottom: 10px;
 }
 
 .story-tit-bd ul li p {
-    font-size: 14px;
+    font-size: 16px;
     color: #ffffff;
     line-height: 26px;
 }
@@ -2268,7 +2316,7 @@ a:hover {
 }
 
 .sidebar-list ul li a {
-    font-size: 14px;
+    font-size: 16px;
     color: #696969;
     line-height: 30px;
     display: block;
@@ -2335,12 +2383,12 @@ a:hover {
 .blurtext h3 {
     font-size: 24px;
     color: #ffffff;
-    line-height: 32px;
+    line-height: 50px;
 }
 
 .blurtext p {
-    font-size: 14px;
-    line-height: 33px;
+    font-size: 16px;
+    line-height: 30px;
     color: #ffffff;
 }
 
@@ -2357,18 +2405,18 @@ a:hover {
 }
 
 .story-tit-top.pasture ul li.show span {
-    background: rgba(255, 186, 0, .8);
+    background: rgba(1, 176, 239, .7);
     color: #ffffff;
 }
 
 .story-tit-bd.pasture ul li {
     width: 600px;
     height: 300px;
-    background: #ffbd00;
+    background: #01b0ef;
 }
 
 .story-tit-bd.pasture ul li a:before {
-    border-bottom: 10px solid #ffbd00;
+    border-bottom: 10px solid #01b0ef;
 }
 
 .story-tit-bd.pasture ul li:nth-child(1) a:before {

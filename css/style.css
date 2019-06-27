@@ -196,6 +196,7 @@ ul:after,
 html,
 body {
     min-width: 1200px;
+    font-family: "Microsoft YaHei UI", sans-serif;
     /*font-family: 'Noto Sans SC', sans-serif;*/
     /* font-family: SourceHanSansCN-Regular, sans-serif; */
     /* font-weight: 200; */
@@ -1896,16 +1897,24 @@ a:hover {
 
 .kj-txt .box {
     /*padding: 120px 0;*/
+    display: table
 }
 
 .kj-txt .left {
     width: 530px;
-    float: left;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.kj-txt .right {
+    padding-left: 30px;
 }
 
 .kj-txt h3 {
-    font-size: 30px;
+    font-size: 28px;
     color: #014a99;
+    padding: 5px 0;
+    font-weight: bold
 }
 
 .kj-txt h4 {
@@ -1914,9 +1923,10 @@ a:hover {
 }
 
 .kj-txt p {
-    font-size: 14px;
+    font-size: 16px;
     color: #696969;
-    line-height: 33px;
+    line-height: 30px;
+    padding-bottom: 5px;
 }
 
 
